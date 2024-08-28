@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 client = openai.OpenAI()
 
 app = Flask(__name__)
