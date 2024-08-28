@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Financial Robo Advisor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+        }
+        form {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 200px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Financial Robo Advisor</h2>
+
+    <div class="content-container">
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/1634086519/photo/human-and-robot-hands-forming-a-heart-shape-together-ai-and-human-collaboration-concept.jpg?s=1024x1024&w=is&k=20&c=y-Hh5I7_kkPvympGEHh_aG9tc9_78YN3X-3dAoHxhVw=" alt="Financial AI Agent Illustration">
+        </div>
+
+        <form action="/ai_agent" method="post">
+            <input type="submit" value="AI Agent">
+        </form>
+
+        <form action="/prediction" method="post">
+            <input type="submit" value="Prediction">
+        </form>
+
+        <form action="/joke" method="post">
+            <input type="submit" value="Tell me a joke" class="joke-button">
+        </form>
+    </div>
+</body>
+</html>

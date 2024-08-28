@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Reply</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .reply-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h4 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: #2980b9;
+        }
+        .back-arrow {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>AI Agent Reply</h2>
+
+    <div class="reply-container">
+        <h4>{{r}}</h4>
+    </div>
+
+    <a href="/" class="back-link">
+        <span class="back-arrow">&#8592;</span> Back to Main Menu
+    </a>
+</body>
+</html>
