@@ -1,8 +1,11 @@
 from flask import Flask,render_template,request
 import os
+from dotenv import load_dotenv, dotenv_values 
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
+load_dotenv() 
+
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_KEY")
 client = openai.OpenAI()
 
 app = Flask(__name__)
