@@ -2,8 +2,9 @@ from flask import Flask,render_template,request
 import os
 from dotenv import load_dotenv, dotenv_values 
 import openai
+from textblob import TextBlob
 
-load_dotenv() 
+load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_KEY")
 client = openai.OpenAI()
@@ -35,6 +36,19 @@ def prediction():
 @app.route("/joke", methods=["GET","POST"])
 def joke():
     return(render_template("joke.html"))
+
+@app.route("/sentiment_analysis", methods=["GET","POST"])
+def sentiment_analysis():
+    return render_template("sentiment_analysis.html")
+
+@app.route("/sentiment_analysis_reply", methods=["GET","POST"])
+def sentiment_analysis_reply():
+    text = request.form.get("text")
+    analysis = TextBlob(text).sentiment
+    return render_template("sentiment_analysis_reply.html", 
+                           text=text, 
+                           polarity=round(analysis.polarity, 2), 
+                           subjectivity=round(analysis.subjectivity, 2))
 
 if __name__ == "__main__":
     app.run()

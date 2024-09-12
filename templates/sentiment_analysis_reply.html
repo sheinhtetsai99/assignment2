@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h2 { color: #2c3e50; }
+        .reply-container { background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin-top: 20px; }
+        .back-link { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; }
+        .back-arrow { margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Sentiment Analysis Result</h2>
+
+    <div class="reply-container">
+        <h4>Analyzed Text:</h4>
+        <p>"{{text}}"</p>
+        
+        <h4>Results:</h4>
+        <p>Polarity: {{polarity}} (Range: -1 to 1, where -1 is very negative and 1 is very positive)</p>
+        <p>Subjectivity: {{subjectivity}} (Range: 0 to 1, where 0 is very objective and 1 is very subjective)</p>
+    </div>
+
+    <a href="/sentiment_analysis" class="back-link"><span class="back-arrow">←</span> Back to Sentiment Analysis</a>
+    <br>
+    <a href="/" class="back-link"><span class="back-arrow">←</span> Back to Main Menu</a>
+</body>
+</html>
